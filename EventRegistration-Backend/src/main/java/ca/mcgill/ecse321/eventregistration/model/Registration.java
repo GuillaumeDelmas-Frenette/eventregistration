@@ -15,7 +15,7 @@ this.id = value;
 public int getId() {
 return this.id;
     }
-private Person person;
+private Person person; //the Person object needs to be called person (in the model)
 
 @ManyToOne(optional=false)
 public Person getPerson() {
