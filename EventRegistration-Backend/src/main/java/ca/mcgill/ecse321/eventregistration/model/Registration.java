@@ -5,36 +5,39 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Registration{
-private int id;
-   
-   public void setId(int value) {
-this.id = value;
-    }
-@Id
-public int getId() {
-return this.id;
-    }
-private Person person; //the Person object needs to be called person (in the model)
+public class Registration {
 
-@ManyToOne(optional=false)
-public Person getPerson() {
-   return this.person;
-}
+	private int id;
 
-public void setPerson(Person person) {
-   this.person = person;
-}
+	public void setId(int value) {
+		this.id = value;
+	}
 
-private Event event;
+	@Id
+	public int getId() {
+		return this.id;
+	}
 
-@ManyToOne(optional=false)
-public Event getEvent() {
-   return this.event;
-}
+	private Person person;
 
-public void setEvent(Event event) {
-   this.event = event;
-}
+	@ManyToOne(optional = false)
+	public Person getPerson() {
+		return this.person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	private Event event;
+
+	@ManyToOne(optional = false)
+	public Event getEvent() {
+		return this.event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
 
 }
